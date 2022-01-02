@@ -57,7 +57,7 @@ def scatter_avg_plot(data: list, axes, title: str):
 def mapped_avg_plot(data: list, axes, title: str, func, func_label: str):
   axes.set(title=title)
   axes.set_xlabel("Number of urns")
-  avg_mode = 'r-' 
+  avg_mode = 'ro-' 
   avgs = avg_y_axis(data[1])
   mapped_avgs = list(map_y_axis(func, x_axis=data[0], y_axis=avgs))
 

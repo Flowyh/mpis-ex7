@@ -1,9 +1,12 @@
 ## Run with:
+
 ```
 python3 setup.py build_ext --inplace
 python3 test.py
 ```
+
 ## Configuration:
+
 In [test.py](test.py) you can change the variables of the simulation.
 In my [implementation](sim_core.py) of task 3
 I've defined length of permutated arrays as 
@@ -14,12 +17,14 @@ To change the difference between number of elements in permutated array between 
 **Count** is the amount of processess which will be run on your computer to execute this simulation (e.g: running 5 processes with k=10 will yield 5 different jsons of 10 tests for every n specified).
 
 ## Average time of execution for given k:
+
 * $k = 100$ ~8h
 * $k = 50$ ~5h
 * $k = 10$ ~42min
 * $k = 1$ ~6min
 
 ## Plot results with:
+
 ```
 python3 plot.py [target_dir] [k]
 E.g: python3 plot.py results/31-12-2021_14\:35\:56/ 100

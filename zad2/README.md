@@ -1,9 +1,12 @@
 ## Run with:
+
 ```
 python3 setup.py build_ext --inplace
 python3 test.py
 ```
+
 ## Configuration:
+
 In [test.py](test.py) you can change the variables of the simulation.
 In my [implementation](sim_core.py) of task 2 I've defined current number of urns as 
 $n * step$, where $step$ is the difference of number of urns between each nth iteration.
@@ -14,6 +17,7 @@ To change the difference between number of urns between each nth iteration chang
 **Count** is the amount of processess which will be run on your computer to execute this simulation (e.g: running 5 processes with k=10 will yield 5 different jsons of 10 tests for every n specified).
 
 ## Plot results with:
+
 ```
 python3 plot.py [target_dir]
 E.g: python3 plot.py results/31-12-2021_14\:35\:56/
