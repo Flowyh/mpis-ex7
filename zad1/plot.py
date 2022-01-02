@@ -97,7 +97,7 @@ if __name__ == '__main__':
     'un': 'Un - number of empty urns after inserting n balls',
     'ln': 'Ln - max number of balls after inserting n balls (maximum load)',
     'cn': 'Cn - minimum of insertions for every urn to have at least one ball inside (coupon collector\'s problem)',
-    'dn': 'Dn - minimum of insertions for every urn to have at least two balls inside (coupon collector\'s brother',
+    'dn': 'Dn - minimum of insertions for every urn to have at least two balls inside (coupon collector\'s brother)',
     'dn_cn': 'Dn - Cn - number of insertions between Cn and Dn'
   }
   fig, ax = plt.subplots(6, 1, figsize=(10, 20))
@@ -142,13 +142,13 @@ if __name__ == '__main__':
   # Lns
   fig, ax = plt.subplots(3, 1, figsize=(10, 9))
   mapped_avg_plot(data=funcs['ln'], axes=ax[0], title=funcs_titles['ln'], func=lambda x, y: y / np.log(x), func_label='Ln/ln(n)')
-  ax[0].set_ylim(0.4, 1)  
+  ax[0].set_ylim(0.5, 0.85)  
   setup_plot(ax[0])
   mapped_avg_plot(data=funcs['ln'], axes=ax[1], title=funcs_titles['ln'], func=lambda x, y: y / (np.log(x) / np.log(np.log(x))), func_label='Ln/ln(n)/ln(ln(n))')  
   ax[1].set_ylim(1.2, 2.5)  
   setup_plot(ax[1])
   mapped_avg_plot(data=funcs['ln'], axes=ax[2], title=funcs_titles['ln'], func=lambda x,y : y / np.log(np.log(x)), func_label='Ln/ln(ln(n))')
-  ax[2].set_ylim(2, 5)  
+  ax[2].set_ylim(2.5, 3.5)  
   setup_plot(ax[2])
   fig.tight_layout()
   fig.show()
@@ -196,7 +196,3 @@ if __name__ == '__main__':
   fig.tight_layout()
   fig.show()
   fig.savefig(f'{save_dir}/task1-dn_cns.png')
-
-
-  
-
