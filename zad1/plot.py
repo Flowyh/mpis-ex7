@@ -115,7 +115,7 @@ if __name__ == '__main__':
   mapped_avg_plot(data=funcs['bn'], axes=ax[0], title=funcs_titles['bn'], func=lambda x, y: y / x, func_label='Bn/x')
   setup_plot(ax[0])
   mapped_avg_plot(data=funcs['bn'], axes=ax[1], title=funcs_titles['bn'], func=lambda x, y: y / np.sqrt(x), func_label='Bn/sqrt(x)')
-  
+  ax[1].set_ylim(0.0, 10)
   # Big-O test
   # down = [(x, 1/np.sqrt(x)) for x in range(100, 100000, 100)]
   # upper = [(x, 500/np.sqrt(x)) for x in range(100, 100000, 100)]
@@ -133,6 +133,7 @@ if __name__ == '__main__':
   # Uns
   fig, ax = plt.subplots(1, 1, figsize=(10, 3))
   mapped_avg_plot(data=funcs['un'], axes=ax, title=funcs_titles['un'], func=lambda x, y: y / x, func_label='Un/n')
+  ax.set_ylim(0.0, 0.8)
   setup_plot(ax)
   fig.tight_layout()
   fig.show()
@@ -141,8 +142,10 @@ if __name__ == '__main__':
   # Lns
   fig, ax = plt.subplots(3, 1, figsize=(10, 9))
   mapped_avg_plot(data=funcs['ln'], axes=ax[0], title=funcs_titles['ln'], func=lambda x, y: y / np.log(x), func_label='Ln/ln(n)')
+  ax[0].set_ylim(0.4, 1)  
   setup_plot(ax[0])
   mapped_avg_plot(data=funcs['ln'], axes=ax[1], title=funcs_titles['ln'], func=lambda x, y: y / (np.log(x) / np.log(np.log(x))), func_label='Ln/ln(n)/ln(ln(n))')  
+  ax[1].set_ylim(1.2, 2.5)  
   setup_plot(ax[1])
   mapped_avg_plot(data=funcs['ln'], axes=ax[2], title=funcs_titles['ln'], func=lambda x,y : y / np.sqrt(x), func_label='Ln/sqrt(n)')
   setup_plot(ax[2])
@@ -153,8 +156,10 @@ if __name__ == '__main__':
   # Cns
   fig, ax = plt.subplots(3, 1, figsize=(10, 9))
   mapped_avg_plot(data=funcs['cn'], axes=ax[0], title=funcs_titles['cn'], func=lambda x, y: y / x, func_label='Cn/n')
+  ax[0].set_ylim(7, 16) 
   setup_plot(ax[0])
   mapped_avg_plot(data=funcs['cn'], axes=ax[1], title=funcs_titles['cn'], func=lambda x, y: y / (x * np.log(x)), func_label='Cn/nln(n)')  
+  ax[1].set_ylim(0.5, 2)   
   setup_plot(ax[1])
   mapped_avg_plot(data=funcs['cn'], axes=ax[2], title=funcs_titles['cn'], func=lambda x,y : y / (x * x), func_label='Cn/n^2')
   setup_plot(ax[2])
@@ -165,8 +170,10 @@ if __name__ == '__main__':
   # Dns
   fig, ax = plt.subplots(3, 1, figsize=(10, 9))
   mapped_avg_plot(data=funcs['dn'], axes=ax[0], title=funcs_titles['dn'], func=lambda x, y: y / x, func_label='Dn/n')
+  ax[0].set_ylim(9, 17) 
   setup_plot(ax[0])
   mapped_avg_plot(data=funcs['dn'], axes=ax[1], title=funcs_titles['dn'], func=lambda x, y: y / (x * np.log(x)), func_label='Dn/nln(n)')  
+  ax[1].set_ylim(1, 2)   
   setup_plot(ax[1])
   mapped_avg_plot(data=funcs['dn'], axes=ax[2], title=funcs_titles['dn'], func=lambda x,y : y / (x * x), func_label='Dn/n^2')
   setup_plot(ax[2])
@@ -177,10 +184,13 @@ if __name__ == '__main__':
   # Dn-Cns
   fig, ax = plt.subplots(3, 1, figsize=(10, 9))
   mapped_avg_plot(data=funcs['dn_cn'], axes=ax[0], title=funcs_titles['dn_cn'], func=lambda x, y: y / x, func_label='(Dn-Cn)/n')
+  ax[0].set_ylim(0.5, 6.5) 
   setup_plot(ax[0])
   mapped_avg_plot(data=funcs['dn_cn'], axes=ax[1], title=funcs_titles['dn_cn'], func=lambda x, y: y / (x * np.log(x)), func_label='(Dn-Cn)/nln(n)')  
+  ax[1].set_ylim(0, 1) 
   setup_plot(ax[1])
   mapped_avg_plot(data=funcs['dn_cn'], axes=ax[2], title=funcs_titles['dn_cn'], func=lambda x,y : y / (x * np.log(np.log(x))), func_label='(Dn-Cn)/n^2')
+  ax[2].set_ylim(0, 2.5) 
   setup_plot(ax[2])
   fig.tight_layout()
   fig.show()
