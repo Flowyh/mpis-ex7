@@ -61,7 +61,12 @@ Z zadania 2:
 Kontynuując rozumowanie jak w zad 1, funkcje dla d=1 i d=2 należą do $\Theta(\frac{\ln{n}}{\ln{\ln{n}}})$
 ![task-2 ln logs](plots-2/task2-lns.png)
 
-**Uwaga w wykresach z zadania 2 przeskalowałem x przez 1e6**
+Możemy zauważyć, że im większe d wybierzemy, tym bardziej funkcja $l(n)$ dąży do bycia funkcją stałą.
+Dla $d=3$ $l(n)$ jest prawie we wszystkich badanych przeze mnie punktach stała. 
+Dla $d=n$ będzie wynosiła prawie zawsze $l(n)=1$, bo naszym minimum przy wyborze będzie pusta urna (**prawie**, ponieważ, losujemy z powtórzeniami i może się zdarzyć że wylosujemy urny tak, że wszystkie będą już w sobie miały po 1 kuli).
+Dlatego bezpiecznie możemy założyć, że dla $d\ge2:$ $l(n) \xrightarrow{}{} \Theta(1)$.
+
+**Uwaga w wykresach z zadania 2 przeskalowałem x przez 1e6.**
 
 ## Zadanie 3:
 
